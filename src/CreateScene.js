@@ -45,6 +45,9 @@ export class CreateScene {
                 return;
         }
 
+        this.camera.aspect = rect.width / rect.height;
+        this.camera.updateProjectionMatrix();
+
         const canvasBottom = renderer.domElement.clientHeight - rect.bottom;
         renderer.setScissor(rect.left, canvasBottom, rect.width, rect.height);
         renderer.setViewport(rect.left, canvasBottom, rect.width, rect.height);
