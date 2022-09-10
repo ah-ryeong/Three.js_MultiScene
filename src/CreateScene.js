@@ -26,6 +26,8 @@ export class CreateScene {
         this.camera.position.z = cameraPosition.z;
 
         this.scene.add(this.camera);
+
+        this.meshes = [];
     }
 
     set(func) {
